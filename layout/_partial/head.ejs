@@ -4,6 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- import head_begin begin -->
+    <%_ if (config.import && config.import.head_begin){ _%>
+        <%_ ([...config.import.head_begin]).forEach(function(item){ _%>
+        <%- item %>
+        <%_ }) _%>
+    <%_ } _%>
+    <!-- import head_begin end -->
 
     <%
         var title = page.title;
